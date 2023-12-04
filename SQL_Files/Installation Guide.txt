@@ -1,0 +1,10 @@
+How to use this springboot application
+
+step 1: Segregate the sql files from the directory i.e remove sql files from the current folder and 
+        store it in other directory
+step 2: Open Microsoft sql server run all sql files
+step 3: Come to springboot directory folder open it in intellij in application properties 
+        write your username and password
+step4: run the application in console it should show done if working fine
+step 5: open the sql folder in that folder open how to use text file it consist of 4 apis hit that api
+        either in springboot or postman 

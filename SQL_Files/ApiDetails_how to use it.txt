@@ -1,0 +1,31 @@
+1)Api to get all consultants details
+GET
+http://localhost:8080/api/getConsultantList/ Aspiring Software Engineer
+
+2)API to fetch the total number of consultants, total number of clients,
+and total number of sessions booked so far.
+GET 
+http://localhost:8080/api/GetWebAppStatistics/
+
+3)POST http://localhost:8080/api/addConsultant
+Content-Type: application/json
+
+{
+  "cid": 4,
+  "name": "SahilDodeja",
+  "age": 21,
+  "phone_no": "97654321789",
+  "email": "sahildodeja@gmail.com",
+  "job_role": "developer",
+  "cv": "dodejaSahilResume"
+
+}
+
+4)POST http://localhost:8080/api/sessionAcceptingbetweenMentorandClient
+Content-Type: application/json
+
+{
+  "client_id": 2
+
+}
+

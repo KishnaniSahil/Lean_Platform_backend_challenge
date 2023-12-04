@@ -1,0 +1,23 @@
+CREATE PROCEDURE GetWebAppStatistics
+AS
+BEGIN
+    DECLARE @TotalConsultants INT;
+    DECLARE @TotalClients INT;
+    DECLARE @TotalSessionsBooked INT;
+
+    -- Get total number of consultants
+    SELECT @TotalConsultants = COUNT(*) FROM consulting_app_schema.consultant;
+
+    -- Get total number of clients
+    SELECT @TotalClients = COUNT(*) FROM consulting_app_schema.consultant;
+
+    -- Get total number of sessions booked
+    SELECT @TotalSessionsBooked = COUNT(*) FROM consulting_app_schema.mentor_request WHERE Sessionbooked = 1;
+
+    -- Return the results
+    SELECT
+        TotalConsultants = @TotalConsultants,
+        TotalClients = @TotalClients,
+        TotalSessionsBooked = @TotalSessionsBooked;
+END;
+EXEC GetWebAppStatistics;

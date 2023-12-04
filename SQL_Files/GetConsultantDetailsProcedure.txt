@@ -1,0 +1,10 @@
+CREATE PROCEDURE GetConsultantDetails
+    @jobRole VARCHAR(50) = NULL
+AS
+BEGIN
+    SELECT *
+    FROM consulting_app_schema.consultant
+    WHERE
+        (@jobRole IS NULL OR job_role = @jobRole);
+END;
+exec  GetConsultantDetails ' HR'

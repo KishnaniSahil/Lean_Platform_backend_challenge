@@ -1,0 +1,8 @@
+create procedure [consulting_app_schema].[Sp_acceptRequestBookSession]
+@cid int
+as
+begin
+update consulting_app_schema.mentor_request set consulting_app_schema.mentor_request.Sessionbooked=1 where client_id=@cid;
+end
+exec [consulting_app_schema].[Sp_acceptRequestBookSession] 1
+select * from consulting_app_schema.mentor_request

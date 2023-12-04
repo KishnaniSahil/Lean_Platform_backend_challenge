@@ -1,0 +1,17 @@
+INSERT INTO consulting_app_schema.mentor (mentor_name, age, phone_no, role)
+VALUES 
+    ('Mentor5', 41, '123-456-7898', ' Principal Software Engineer')
+    
+
+INSERT INTO consulting_app_schema.consultant (name, age, phone_no, email, job_role, cv)
+VALUES 
+('diya janyani', 20, '555-555-5554', 'consultant3@example.com', ' HR', 'janyanidiyaResume')
+
+INSERT INTO consulting_app_schema.mentor_request (consultant_name, mentor_name, email, Sessionbooked, client_id, mentor_id)
+VALUES 
+    ('Consultant2', 'Mentor2', 'request2@example.com', 0, 2, 2)
+
+
+select * from consulting_app_schema.mentor
+
+    

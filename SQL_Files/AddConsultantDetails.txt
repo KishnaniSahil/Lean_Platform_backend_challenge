@@ -1,0 +1,14 @@
+CREATE PROCEDURE AddConsultant
+    @Name VARCHAR(255),
+    @Age INT,
+    @PhoneNo VARCHAR(20),
+    @Email VARCHAR(255),
+    @JobRole VARCHAR(100),
+    @CV VARCHAR(20)
+AS
+BEGIN
+    INSERT INTO consulting_app_schema.consultant (name, age, phone_no, email, job_role, cv)
+    VALUES (@Name, @Age, @PhoneNo, @Email, @JobRole, @CV);
+END;
+
+
